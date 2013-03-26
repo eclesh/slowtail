@@ -139,7 +139,7 @@ int main(int argc, char **argv)
 
 	if (strlen(OFFSET_EXT) + strlen(file_name) + 1 > MAX_FILE_NAME) {
 		fprintf(stderr, "%s: filename too long (max is %ld)\n",
-			prog, MAX_FILE_NAME - strlen(OFFSET_EXT));
+			prog, MAX_FILE_NAME - strlen(OFFSET_EXT) - 1);
 		return 1;
 	}
 	strncat(offset_file, file_name,
