@@ -101,10 +101,9 @@ int print_logs(char *filename, ino_t *new_inode, off_t *new_offset)
 		return errno;
 
 	fseek(f, offset, SEEK_SET);
-
 	while ((fgets(buf, MAX_BUF, f)) != NULL)
 		printf("%s", buf);
-
+	fflush(stdout);
 	fclose(f);
 
 	if (ferror(f) != 0)
