@@ -1,5 +1,5 @@
 all:
-	gcc -o slowtail slowtail.c
+	gcc -Wall -o slowtail slowtail.c
 
 clean:
 	rm -f slowtail
